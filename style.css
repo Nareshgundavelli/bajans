@@ -1,16 +1,29 @@
-body{
-font-family: Arial;
-max-width: 700px;
-margin: auto;
-padding: 20px;
-line-height: 1.6;
+body {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 10px;
+  line-height: 1.6;
 }
 
-h1{
-color: darkorange;
+h1 {
+  color: darkorange;
 }
 
-a{
-text-decoration: none;
-color: blue;
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 8px 0;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
 }
