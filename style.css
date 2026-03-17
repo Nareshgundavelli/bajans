@@ -1,29 +1,22 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 700px;
-  margin: 20px auto;
+#searchBox {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#results {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#results li {
+  background: #fff;
+  margin: 5px 0;
   padding: 10px;
-  line-height: 1.6;
-}
-
-h1 {
-  color: darkorange;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-li {
-  margin: 8px 0;
-}
-
-a {
-  text-decoration: none;
-  color: blue;
-}
-
-a:hover {
-  text-decoration: underline;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }

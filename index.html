@@ -5,12 +5,52 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Bhajan Categories</h1>
-  <ul>
-    <li><a href="hanuman.html">Hanuman Bhajans</a></li>
-    <li><a href="rama.html">Rama Bhajans</a></li>
-    <li><a href="krishna.html">Krishna Bhajans</a></li>
-    <li><a href="shiva.html">Shiva Bhajans</a></li>
-  </ul>
+
+  <div class="container">
+
+    <h1>🙏 Bhajan Categories</h1>
+
+    <!-- 🔍 Search Box -->
+    <input type="text" id="searchBox" placeholder="Search bhajans..." onkeyup="searchBhajans()" />
+
+    <!-- 🔎 Results -->
+    <ul id="results"></ul>
+
+    <!-- 📂 Categories -->
+    <div class="grid">
+      <a href="hanuman/" class="card">🐒 Hanuman</a>
+      <a href="rama/" class="card">🏹 Rama</a>
+      <a href="krishna/" class="card">🎶 Krishna</a>
+      <a href="shiva/" class="card">🔱 Shiva</a>
+    </div>
+
+  </div>
+
+<script>
+
+const songs = [
+  { name: "Hanuman Chalisa", link: "hanuman/hanuman-chalisa.html" },
+  { name: "Bajrang Baan", link: "hanuman/bajrang-baan.html" },
+  { name: "Raghupati Raghav Raja Ram", link: "rama/raghupati.html" }
+];
+
+function searchBhajans() {
+  let input = document.getElementById("searchBox").value.toLowerCase();
+  let results = document.getElementById("results");
+  results.innerHTML = "";
+
+  if (input === "") return;
+
+  let filtered = songs.filter(song => song.name.toLowerCase().includes(input));
+
+  filtered.forEach(song => {
+    let li = document.createElement("li");
+    li.innerHTML = `<a href="${song.link}">${song.name}</a>`;
+    results.appendChild(li);
+  });
+}
+
+</script>
+
 </body>
 </html>
